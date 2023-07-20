@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   greenLeaf.style.position = "absolute";
   greenLeaf.style.zIndex = "999"; // Adjust the z-index to ensure it appears above other elements
 
-
   // Function to position the green leaf image at a random position on the page
   function positionGreenLeaf(event) {
     const x = event.clientX;
@@ -37,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     greenLeaf.style.left = `${Math.min(x, maxX)}px`;
     greenLeaf.style.top = `${Math.min(y, maxY)}px`;
     greenLeaf.style.opacity = 1;
+    greenLeaf.style.transform = `rotate(${Math.random() * 360}deg)`; // Random rotation
     event.currentTarget.querySelector(".image").style.opacity = 1;
   }
 
